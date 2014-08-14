@@ -7,7 +7,6 @@
 //
 
 #import "nextViewController.h"
-#import "thirdViewController.h"
 
 
 @interface nextViewController ()

@@ -42,7 +42,6 @@
 		AAE85301198C92BC007B4F5D /* topViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE85300198C92BC007B4F5D /* topViewController.m */; };
 		AAE85306198CD12A007B4F5D /* zouki.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE85305198CD12A007B4F5D /* zouki.png */; };
 		AAE8530919907F03007B4F5D /* nextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8530819907F03007B4F5D /* nextViewController.m */; };
-		AAE8530C199080D5007B4F5D /* thirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8530B199080D5007B4F5D /* thirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +100,6 @@
 		AAE85305198CD12A007B4F5D /* zouki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zouki.png; path = image/zouki.png; sourceTree = "<group>"; };
 		AAE8530719907F03007B4F5D /* nextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nextViewController.h; sourceTree = "<group>"; };
 		AAE8530819907F03007B4F5D /* nextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nextViewController.m; sourceTree = "<group>"; };
-		AAE8530A199080D5007B4F5D /* thirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thirdViewController.h; sourceTree = "<group>"; };
-		AAE8530B199080D5007B4F5D /* thirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +175,6 @@
 				AA33D38419987FF500056688 /* LINEActivity.h */,
 				AA33D38519987FF500056688 /* LINEActivity.m */,
 				AAE852E2198C8607007B4F5D /* Images.xcassets */,
-				AAE8530A199080D5007B4F5D /* thirdViewController.h */,
-				AAE8530B199080D5007B4F5D /* thirdViewController.m */,
 				AAE852D1198C8607007B4F5D /* Supporting Files */,
 			);
 			path = "LIFE card";
@@ -348,7 +343,6 @@
 				AAE85301198C92BC007B4F5D /* topViewController.m in Sources */,
 				AAE852E1198C8607007B4F5D /* ViewController.m in Sources */,
 				AA9FB7251995CB37002AE889 /* top2ViewController.m in Sources */,
-				AAE8530C199080D5007B4F5D /* thirdViewController.m in Sources */,
 				AAE852DB198C8607007B4F5D /* AppDelegate.m in Sources */,
 				AAE852D7198C8607007B4F5D /* main.m in Sources */,
 				AA33D39F19990C6600056688 /* SwitchViewController.m in Sources */,

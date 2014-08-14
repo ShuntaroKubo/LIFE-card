@@ -158,7 +158,6 @@
                                 </state>
                                 <connections>
                                     <action selector="slideButton:" destination="ow6-pd-iEZ" eventType="touchUpInside" id="5Fd-bI-v2x"/>
-                                    <segue destination="AbB-R3-yJ2" kind="custom" id="Zcx-Jy-KCW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,70 +241,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaB-G7-wfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1985" y="1232"/>
-        </scene>
-        <!--Third View Controller - Title-->
-        <scene sceneID="uNY-al-pfE">
-            <objects>
-                <viewController storyboardIdentifier="thirdViewController" id="AbB-R3-yJ2" customClass="thirdViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vU7-pb-dvC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Aty-eE-ry2"/>
-                    </layoutGuides>
-                    <view key="view" alpha="0.89999997615814209" contentMode="scaleToFill" id="50X-gv-tch">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdz-cW-SsT" userLabel="FView">
-                                <rect key="frame" x="80" y="142" width="160" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6l-bd-Zh7">
-                                <rect key="frame" x="12" y="224" width="297" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm6-wN-nwJ">
-                                <rect key="frame" x="246" y="383" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-h1-7Zc">
-                                <rect key="frame" x="276" y="471" width="24" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete48.png">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="TrashButton:" destination="AbB-R3-yJ2" eventType="touchUpInside" id="0JE-0g-wRK"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teZ-Vm-SpI" userLabel="GView">
-                                <rect key="frame" x="80" y="142" width="160" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.036985193790000002" green="0.57387994259999997" blue="0.12711989000000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                        <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="Qxc-qi-SOZ">
-                        <barButtonItem key="leftBarButtonItem" image="multiple25.png" id="DNd-L4-5lf"/>
-                        <barButtonItem key="rightBarButtonItem" image="task-2.png" id="ABh-O0-qQX"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="TrashButton" destination="cqd-h1-7Zc" id="GnY-9j-yha"/>
-                        <outlet property="myLabel" destination="W6l-bd-Zh7" id="PGT-Wl-Q1a"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dOX-wH-rB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2971" y="506"/>
         </scene>
         <!--Switch View Controller - LIFEcard-->
         <scene sceneID="rDv-TM-92y">

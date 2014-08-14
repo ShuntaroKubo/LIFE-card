@@ -7,7 +7,6 @@
 //
 
 #import "SwitchViewController.h"
-#import "thirdViewController.h"
 
 @interface SwitchViewController ()
 
