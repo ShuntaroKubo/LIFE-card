@@ -37,7 +37,7 @@
 //    label.text = @"LIFE card";
 //    self.navigationItem.titleView = label;
     
-    //テキストビューの編集不可に
+    //テキストビューの編集不可
     
     self.myTextField.editable = NO;
     
