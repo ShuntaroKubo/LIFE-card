@@ -7,11 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import "MFSideMenuContainerViewController.h"
+#import "rightSideMenuViewController.h"
+#import "SwitchViewController.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    MFSideMenuContainerViewController *container = (MFSideMenuContainerViewController *)self.window.rootViewController;
+    UITabBarController *TabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+    //    UIViewController *leftSideMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"leftSideMenuViewController"];
+    UIViewController *rightSideMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"rightSideMenuViewController"];
+    
+    //    [container setLeftMenuViewController:leftSideMenuViewController];
+    [container setRightMenuViewController:rightSideMenuViewController];
+    [container setCenterViewController:TabBarController];
+    
+
+    
+    
     //[[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"cccc.png"]];
     
     //ナビゲーションバー色設定
