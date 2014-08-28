@@ -29,6 +29,7 @@
     [super viewDidLoad];
     
     NSURL *myURL = [NSURL URLWithString:@"http://www.jotnw.or.jp/sp/"];
+    
     NSURLRequest *myURLReq = [NSURLRequest requestWithURL:myURL];
     
     [self.topWebView loadRequest: myURLReq];

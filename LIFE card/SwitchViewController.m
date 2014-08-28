@@ -7,12 +7,16 @@
 //
 
 #import "SwitchViewController.h"
+#import "UIViewController+MFSideMenuAdditions.h"
+#import "MFSideMenuContainerViewController.h"
 
 @interface SwitchViewController ()
 
 @end
 
 @implementation SwitchViewController
+
+
 //
 //+ (SwitchViewController *)containerWithCenterViewController:(id)centerViewController
 //                                                 rightMenuViewController:(id)rightMenuViewController {
@@ -50,11 +54,15 @@
     self.doneLabel.font = [UIFont systemFontOfSize:23];
     
     NSAttributedString* value;
+    
     NSMutableAttributedString *message = [[NSMutableAttributedString alloc] initWithString:@""];
+    
     NSMutableParagraphStyle *paraStyle_L = [[NSMutableParagraphStyle alloc] init];
     [paraStyle_L setAlignment:NSTextAlignmentLeft];
+    
     NSMutableParagraphStyle *paraStyle_C = [[NSMutableParagraphStyle alloc] init];
     [paraStyle_C setAlignment:NSTextAlignmentCenter];
+    
     NSMutableParagraphStyle *paraStyle_R = [[NSMutableParagraphStyle alloc] init];
     [paraStyle_R setAlignment:NSTextAlignmentRight];
     
@@ -63,17 +71,22 @@
     //[message appendAttributedString:value];
     //value = [[NSAttributedString alloc] initWithString:@"中央揃え\n"
     //attributes:@{NSParagraphStyleAttributeName:paraStyle_C}];
+    
     [message appendAttributedString:value];
+    
     value = [[NSAttributedString alloc] initWithString:@"意思表示しました\n"
                                             attributes:@{NSParagraphStyleAttributeName:paraStyle_R}];
     [message appendAttributedString:value];
     
     self.doneLabel.numberOfLines = 0;
+    
     self.doneLabel.attributedText = message;
 
     //キーから値を取得する
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     BOOL defaultbool = [defaults boolForKey:@"SwitchStatus"];
+    
     self.mySwiych.on = defaultbool;
     
     if (self.mySwiych.on)
@@ -104,6 +117,7 @@
 - (IBAction)mySwitch:(id)sender
 {
     if (self.mySwiych.on == YES)
+    
     {
         //self.doneLabel.text =@"意思表示中です";
         //alpha透明度
@@ -126,7 +140,9 @@
     
     //指定したキーに入力された値を保存する
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
     [defaults setBool:self.mySwiych.on forKey:@"SwitchStatus"];
+   
     [defaults synchronize];
     
 }
@@ -152,14 +168,15 @@
 //    self.doneView.alpha = 0.0;
     
     
-    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"本当に解除しますか？" delegate:self cancelButtonTitle:@"Cancel"destructiveButtonTitle:@"削除" otherButtonTitles:nil];
-    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"本当に解除しますか？"
+        delegate:self cancelButtonTitle:@"Cancel"destructiveButtonTitle:@"削除" otherButtonTitles:nil];
     
     [actionSheet showInView:self.view];
     
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+
 {
     switch (buttonIndex) {
         case 0:
@@ -169,21 +186,22 @@
             //単純に値を設定するとき
             self.mySwiych.on = NO;
             
-
-            
             break;
         
         default:
             break;
-            
-            
-            
-            
-    }
+}
     
 }
 
 - (IBAction)menuButton:(id)sender
+
 {
+}
+
+- (IBAction)tapinformationBtn:(id)sender
+
+{
+    [self.menuContainerViewController toggleRightSideMenuCompletion:nil];
 }
 @end

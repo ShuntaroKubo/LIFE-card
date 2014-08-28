@@ -75,6 +75,7 @@
 {
     
     NSString *text = @"Hello World!";
+    
     NSArray* actItems = [NSArray arrayWithObjects:text, nil];
     
     UIActivityViewController *activityView = [[UIActivityViewController alloc]
@@ -82,7 +83,9 @@
     
     [self presentViewController:activityView animated:YES completion:nil];
 }
+
 - (IBAction)slideButton:(id)sender
+
 {
     
 }

@@ -34,6 +34,9 @@
 
 - (IBAction)menuButton:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *tapinformationBtn;
+
+- (IBAction)tapinformationBtn:(id)sender;
 
 //テスト
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;

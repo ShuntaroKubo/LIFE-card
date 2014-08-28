@@ -22,8 +22,10 @@
 
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems
+
 {
     for (id activityItem in activityItems) {
+    
     if ([activityItem isKindOfClass:[NSString class]] || [activityItem isKindOfClass:[UIImage class]])
         {
             return YES;
@@ -37,6 +39,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
         // Custom initialization
     }
@@ -49,6 +52,7 @@
     //self.mytextView.text = @"臓器移植を待つ人の為に私たちが出来る事\nそれが臓器提供の意思表示です。\n軽々しく決めることでなく、\nノーといってもいい。\n大事なのは意思を示すこと。\nひとりひとりが他人事ではなく、自分の事としてこの問題を考え、\n意思表示という行動をとる事が、移植医療の大きな一歩になる。\nそう思うのです。\n従来の「意思表示カード」に加え、\n健康保険証や運転免許証、\nさらにはインターネットでも\n意思表示が出来るようになりました。";
     
     //self.mytextView.font = [UIFont boldSystemFontOfSize:20.0];
+    
     
     
     self.mytextView.editable = NO;
@@ -71,7 +75,7 @@
     NSFontAttributeName : [UIFont systemFontOfSize:18.0f],
     NSParagraphStyleAttributeName:paraStyle_C};
     
-    NSString *str = @"臓器移植を待つ人の為に私たちが\n出来る事\nそれが臓器提供の意思表示です。\n軽々しく決めることでなく、\nノーといってもいい。\n大事なのは意思を示すこと。\nひとりひとりが他人事ではなく、自分の事としてこの問題を考え、\n意思表示という行動をとる事が、移植医療の大きな一歩になる。\nそう思うのです。\n従来の「意思表示カード」に加え、\n健康保険証や運転免許証、\nさらにはインターネットでも\n意思表示が出来るようになりました。";
+    NSString *str = @"私たちが出来る事\nそれが臓器提供の意思表示です。\n軽々しく決めることでなく、\nノーといってもいい。\n大事なのは全ての事において、自らの意思を示すこと。\nひとりひとりが他人事ではなく、自分の事として問題を考え、\n意思表示という行動をとる事が、大きな一歩になる。\nそう思うのです。\n従来の「意思表示カード」に加え、\n健康保険証や運転免許証、\nさらにはインターネットでも\n意思表示が出来るようになりました。";
     
     NSAttributedString* value = [[NSAttributedString alloc] initWithString:str
                                             attributes:stringAttributes];
@@ -108,6 +112,7 @@
 }
 
 - (void)didReceiveMemoryWarning
+
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -125,20 +130,25 @@
 */
 
 - (IBAction)tapButton2:(id)sender
+
 {
     //self.mytextView.text = @"臓器の説明２";
     //画面遷移の仕方
     top2ViewController *top2ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"top2ViewController"];
 //    [self presentViewController:top2ViewController animated:YES completion:nil];
+   
     [[self navigationController] pushViewController:top2ViewController animated:YES];
        
     
 }
 
 - (void)shareItem:(id)item
+
 {
     NSArray *activityItems = @[item];
+   
     NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+   
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
     
     [self presentViewController:activityViewController animated:YES completion:NULL];
@@ -161,11 +171,6 @@
     
     [self presentViewController:activityView animated:YES completion:nil];
     */
-    
-  
 
-
-    
-    
 }
 @end
