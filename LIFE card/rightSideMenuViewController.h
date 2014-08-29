@@ -34,8 +34,13 @@
 //ボタンのアクション
 - (IBAction)defalttapBtn:(id)sender;
 
+//labelに名前をつける
 @property (weak, nonatomic) IBOutlet UIView *upView;
 
 @property (weak, nonatomic) IBOutlet UILabel *DetailsLabel;
+
+//スワイプジェスチャーの設定
+
+- (IBAction)swipeGestureDown:(id)sender;
 
 @end

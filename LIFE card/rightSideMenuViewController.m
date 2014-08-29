@@ -134,7 +134,7 @@
 {
     NSLog(@"keyboardWasShown");
     
-    _upView.frame = CGRectMake(20, -70, self.view.bounds.size.width, 250);
+    _upView.frame = CGRectMake(20, -85, self.view.bounds.size.width, 250);
     
     _DetailsLabel.frame = CGRectMake(20, 185, 92, 21);
     
@@ -257,4 +257,25 @@
     NSLog(@"あれ%@", defaults);
 }
 
+
+- (IBAction)swipeGestureDown:(id)sender
+{
+    NSLog(@"スワイプしました。");
+    //キーボード閉じる
+    [self.NameTextField resignFirstResponder];
+    
+    [self.DateTextField resignFirstResponder];
+    
+    [self.PlaceTextField resignFirstResponder];
+    
+    [self.DatailsTextField resignFirstResponder];
+    
+    //全体を下げる
+    _upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
+    
+    _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+
+    _DatailsTextField.frame = CGRectMake(20,325,239,136);
+    
+}
 @end

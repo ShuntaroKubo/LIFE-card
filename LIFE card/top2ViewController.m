@@ -33,6 +33,24 @@
     NSURLRequest *myURLReq = [NSURLRequest requestWithURL:myURL];
     
     [self.topWebView loadRequest: myURLReq];
+    
+    //indicatorに対して回す処理を書く
+    [self.loadingindicator startAnimating];
+    
+    //
+    self.topWebView.delegate = self;
+    
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    //webが開いた時、indicatorを止める処理
+    [self.loadingindicator stopAnimating];
+    
+    //webが開いた時、indicataorを透過させる処理
+    self.loadingindicator.alpha = 0;
+    
 }
 
 - (void)didReceiveMemoryWarning
