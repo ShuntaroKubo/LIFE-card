@@ -13,6 +13,8 @@
 <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *topWebView;
+
+//Activity Indicatorの名前設定
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingindicator;
 
 @end

@@ -40,6 +40,9 @@
     //
     self.topWebView.delegate = self;
     
+//    // サイズを指定した生成例
+//    UIActivityIndicatorView *ai =
+//    [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
     
 }
 
@@ -50,7 +53,8 @@
     
     //webが開いた時、indicataorを透過させる処理
     self.loadingindicator.alpha = 0;
-    
+   
+       
 }
 
 - (void)didReceiveMemoryWarning

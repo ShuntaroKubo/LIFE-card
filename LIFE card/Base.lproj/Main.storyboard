@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Top View Controller - LIFEcard-->
+        <!--Top View Controller - LIFE card-->
         <scene sceneID="EJo-Bu-16Q">
             <objects>
                 <viewController id="rFT-P4-E9a" customClass="topViewController" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="11" width="320" height="546"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.036985193786085648" green="0.57387994260204089" blue="0.12711989002788088" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.28214814589999998" blue="0.15097747719999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -40,7 +40,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="pM1-59-lXZ"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="LIFEcard" id="Wv2-bE-fqD">
+                    <navigationItem key="navigationItem" title="LIFE card" id="Wv2-bE-fqD">
                         <barButtonItem key="leftBarButtonItem" title="シェア" id="EKB-SC-UX3">
                             <connections>
                                 <action selector="sharebutton:" destination="rFT-P4-E9a" id="AYq-2g-dML"/>
@@ -101,7 +101,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gta-4K-rRx">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="barTintColor" red="0.40983141779999999" green="0.68767936860000001" blue="0.31843274310000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.53793753219621432" blue="0.49434528287073187" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="qWq-F2-ot4" kind="relationship" relationship="viewControllers" id="1iy-70-Y2h"/>
@@ -113,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="208"/>
         </scene>
-        <!--Next View Controller - LIFEcard-->
+        <!--Next View Controller - LIFE card-->
         <scene sceneID="mxO-wS-Unv">
             <objects>
                 <viewController id="ow6-pd-iEZ" customClass="nextViewController" sceneMemberID="viewController">
@@ -169,7 +169,7 @@
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="LIFEcard" id="PU8-xC-xg0">
+                    <navigationItem key="navigationItem" title="LIFE card" id="PU8-xC-xg0">
                         <barButtonItem key="leftBarButtonItem" title="シェア" id="hOZ-lS-Zpw">
                             <connections>
                                 <action selector="shareButton:" destination="ow6-pd-iEZ" id="PTA-Yv-JgY"/>
@@ -187,15 +187,16 @@
             </objects>
             <point key="canvasLocation" x="2481" y="506"/>
         </scene>
-        <!--Navigation Controller - menu-->
+        <!--Navigation Controller - Menu-->
         <scene sceneID="vc5-ZS-hjU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qWq-F2-ot4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="menu" image="earth182-3.png" id="txW-TB-9Zf"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="earth182-3.png" id="txW-TB-9Zf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4ju-bA-J6O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.28214814589999998" blue="0.15097747719999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -206,16 +207,16 @@
             </objects>
             <point key="canvasLocation" x="1985" y="-213"/>
         </scene>
-        <!--Navigation Controller - data-->
+        <!--Navigation Controller - Data-->
         <scene sceneID="fJ6-vv-sXB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJX-36-dhK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="data" image="stock4-3 2.png" id="FLN-Hw-S1o"/>
+                    <tabBarItem key="tabBarItem" title="Data" image="stock4-3 2.png" id="FLN-Hw-S1o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="brK-er-2g9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.40983141782739008" green="0.68767936862244894" blue="0.31843274311959696" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.28214814589999998" blue="0.15097747719999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -272,16 +273,16 @@
             </objects>
             <point key="canvasLocation" x="1076" y="1654"/>
         </scene>
-        <!--Navigation Controller - action-->
+        <!--Navigation Controller - Action-->
         <scene sceneID="Gad-Ye-RYB">
             <objects>
                 <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="mzW-UU-2Ic" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="action" image="handshake1-3.png" id="1pd-eY-ewF"/>
+                    <tabBarItem key="tabBarItem" title="Action" image="handshake1-3.png" id="1pd-eY-ewF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1uH-T0-0KN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.40983141779999999" green="0.68767936860000001" blue="0.31843274310000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.28214814589999998" blue="0.15097747719999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -292,7 +293,7 @@
             </objects>
             <point key="canvasLocation" x="1985" y="1184"/>
         </scene>
-        <!--Switch View Controller - LIFEcard-->
+        <!--Switch View Controller - LIFE card-->
         <scene sceneID="rDv-TM-92y">
             <objects>
                 <viewController storyboardIdentifier="SwitchViewController" id="6TY-9x-QRM" customClass="SwitchViewController" sceneMemberID="viewController">
@@ -358,7 +359,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LIFEcard" id="epJ-dC-dqM">
+                    <navigationItem key="navigationItem" title="LIFE card" id="epJ-dC-dqM">
                         <barButtonItem key="leftBarButtonItem" title="シェア" id="wFP-9w-ebB">
                             <connections>
                                 <action selector="shareButton:" destination="6TY-9x-QRM" id="4lY-L9-pe5"/>
@@ -388,7 +389,6 @@
         <!--Right Side Menu View Controller-->
         <scene sceneID="83Y-I5-L72">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQd-i2-c8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="rightSideMenuViewController" id="LxS-AS-Gd3" customClass="rightSideMenuViewController" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kLm-J9-5Zm"/>
@@ -513,6 +513,7 @@
                         <outlet property="upView" destination="dqD-a1-hcZ" id="XTn-ph-Ycj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQd-i2-c8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="down" id="e3l-Nl-dsH">
                     <connections>
                         <action selector="swipeGestureDown:" destination="LxS-AS-Gd3" id="IVm-Xo-vPJ"/>
