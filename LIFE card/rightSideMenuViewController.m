@@ -124,14 +124,26 @@
 //    }
  self.DatailsTextField.delegate = self;
     
-    // キーボードが表示されたときのNotificationをうけとります。（後で）
-    [self registerForKeyboardNotifications];
+//    // キーボードが表示されたときのNotificationをうけとります。（後で）
+//    [self registerForKeyboardNotifications];
+    
     
     
 }
 
+-(BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+
+    //テキストビューを編集するであろう。
+    [self registerForKeyboardNotifications];
+    
+    return YES;
+
+}
+
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
+    
     NSLog(@"keyboardWasShown");
     
     _upView.frame = CGRectMake(20, -85, self.view.bounds.size.width, 250);
@@ -170,6 +182,20 @@
     [defaults setObject:self.DatailsTextField.text forKey:@"DatailsTextField"];
 
     [NametextField resignFirstResponder];
+    
+    //キーボード閉じたときに全体下げる
+    
+    //全体を下げる
+    _upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
+    
+    _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+    
+    _DatailsTextField.frame = CGRectMake(20,325,239,136);
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+
+    
+    
     return YES;
 }
 
@@ -251,10 +277,10 @@
     
     
     [defaults synchronize];
-    //
-    NSLog(@"あれ%@", str);
-    
-    NSLog(@"あれ%@", defaults);
+//    //
+//    NSLog(@"あれ%@", str);
+//    
+//    NSLog(@"あれ%@", defaults);
 }
 
 
@@ -276,6 +302,9 @@
     _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
 
     _DatailsTextField.frame = CGRectMake(20,325,239,136);
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    
     
 }
 @end

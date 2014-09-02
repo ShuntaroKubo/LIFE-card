@@ -123,6 +123,9 @@
         //alpha透明度
         self.doneView.alpha = 1.0;
         
+        //trashSwitch表示
+        self.trashSwitch.alpha = 1.0;
+        
         
         //画面遷移の仕方
 //    thirdViewController *thirdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"thirdViewController"];
@@ -134,6 +137,9 @@
     //self.doneLabel.text =@"意思表示していません";
          self.doneView.alpha = 0.0;
             
+    //trashSwitch消す
+        self.trashSwitch.alpha = 0.0;
+            
                
     }
     
@@ -144,6 +150,8 @@
     [defaults setBool:self.mySwiych.on forKey:@"SwitchStatus"];
    
     [defaults synchronize];
+    
+    
     
 }
 
@@ -178,10 +186,16 @@
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 
 {
+   // NSLog(@"Tap");
+    
+    
     switch (buttonIndex) {
         case 0:
             
             self.doneView.alpha = 0.0;
+            
+            //trashSwitch消す
+            self.trashSwitch.alpha = 0.0;
             
             //単純に値を設定するとき
             self.mySwiych.on = NO;
@@ -190,14 +204,13 @@
         
         default:
             break;
+            
+            
 }
     
 }
 
-- (IBAction)menuButton:(id)sender
 
-{
-}
 
 - (IBAction)tapinformationBtn:(id)sender
 
