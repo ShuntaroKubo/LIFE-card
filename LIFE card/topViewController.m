@@ -145,6 +145,7 @@
 - (void)shareItem:(id)item
 
 {
+    //LINEを表示させるソースコード
     NSArray *activityItems = @[item];
    
     NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
@@ -160,6 +161,7 @@
 {
     
     [self shareItem:@"test"];
+    NSLog(@"ok");
     
     /*
     NSString *text = @"Hello World!";

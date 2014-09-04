@@ -9,6 +9,7 @@
 #import "SwitchViewController.h"
 #import "UIViewController+MFSideMenuAdditions.h"
 #import "MFSideMenuContainerViewController.h"
+#import "LINEActivity.h"
 
 @interface SwitchViewController ()
 
@@ -48,7 +49,6 @@
 //    self.navigationItem.titleView = label;
     
     //テキストビューの編集不可
-    
     self.myTextField.editable = NO;
     
     self.doneLabel.font = [UIFont systemFontOfSize:23];
@@ -156,10 +156,20 @@
 }
 
 
-- (IBAction)shareButton:(id)sender
+- (IBAction)shareButton:(id)item
 
 {
+    //LINEを表示させるソースコード
+    NSArray *activityItems = @[item];
     
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+    /*
+    //シェア時に表示させるもの
     NSString *text = @"Hello World!";
     
     NSArray* actItems = [NSArray arrayWithObjects:text, nil];
@@ -168,6 +178,7 @@
                                               initWithActivityItems:actItems applicationActivities:nil];
     
     [self presentViewController:activityView animated:YES completion:nil];
+     */
 }
 - (IBAction)trashSwitch:(id)sender
 {
@@ -176,6 +187,7 @@
 //    self.doneView.alpha = 0.0;
     
     
+    //ボタン押した時のアクションシートの設定
     UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"本当に解除しますか？"
         delegate:self cancelButtonTitle:@"Cancel"destructiveButtonTitle:@"削除" otherButtonTitles:nil];
     
