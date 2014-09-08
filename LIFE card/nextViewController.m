@@ -71,22 +71,7 @@
 }
 */
 
-- (IBAction)shareButton:(id)sender
-
-{
-   
-   //シェア時に表示させるもの
-    NSString *text = @"Hello World!";
-    
-    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
-    
-    UIActivityViewController *activityView = [[UIActivityViewController alloc]
-                                              initWithActivityItems:actItems applicationActivities:nil];
-    
-    [self presentViewController:activityView animated:YES completion:nil];
-}
-
-- (IBAction)slideButton:(id)item
+- (void)shareItem:(id)item
 
 {
     //LINEを表示させるソースコード
@@ -97,6 +82,37 @@
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
     
     [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+}
+
+
+- (IBAction)shareButton:(id)sender
+
+{
+   
+   //シェア時に表示させるもの
+//    NSString *text = @"Hello World!";
+//    
+//    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
+//    
+//    UIActivityViewController *activityView = [[UIActivityViewController alloc]
+//                                              initWithActivityItems:actItems applicationActivities:nil];
+//    
+//    [self presentViewController:activityView animated:YES completion:nil];
+    
+    
+    [self shareItem:@"test"];
+    
+}
+
+- (IBAction)slideButton:(id)sender
+
+{
+    
+    top2ViewController *top2ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"top2ViewController"];
+    //    [self presentViewController:top2ViewController animated:YES completion:nil];
+    
+     [[self navigationController] pushViewController:top2ViewController animated:YES];
     
 }
 @end

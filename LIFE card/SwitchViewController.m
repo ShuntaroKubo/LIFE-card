@@ -155,8 +155,7 @@
     
 }
 
-
-- (IBAction)shareButton:(id)item
+- (void)shareItem:(id)item
 
 {
     //LINEを表示させるソースコード
@@ -168,19 +167,30 @@
     
     [self presentViewController:activityViewController animated:YES completion:NULL];
     
-    /*
-    //シェア時に表示させるもの
-    NSString *text = @"Hello World!";
-    
-    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
-    
-    UIActivityViewController *activityView = [[UIActivityViewController alloc]
-                                              initWithActivityItems:actItems applicationActivities:nil];
-    
-    [self presentViewController:activityView animated:YES completion:nil];
-     */
 }
+
+
+
+- (IBAction)shareButton:(id)item
+
+{
+    //シェア時に表示させるもの
+//    NSString *text = @"Hello World!";
+//    
+//    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
+//    
+//    UIActivityViewController *activityView = [[UIActivityViewController alloc]
+//    initWithActivityItems:actItems applicationActivities:nil];
+//    
+//    [self presentViewController:activityView animated:YES completion:nil];
+    
+    
+    [self shareItem:@"test"];
+   
+}
+
 - (IBAction)trashSwitch:(id)sender
+
 {
 //    self.doneView.alpha = 1.0;
 //    
@@ -216,13 +226,9 @@
         
         default:
             break;
-            
-            
 }
     
 }
-
-
 
 - (IBAction)tapinformationBtn:(id)sender
 

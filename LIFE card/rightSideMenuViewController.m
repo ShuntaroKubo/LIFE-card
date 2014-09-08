@@ -13,14 +13,18 @@
 @end
 
 @implementation rightSideMenuViewController
+
 {
     NSString *_CategoryFilepath;
+    
     NSString *_WannadoFilepath;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
         // Custom initialization
     }
@@ -31,6 +35,7 @@
 {
     [super viewDidLoad];
     
+    //ユーザーデフォルトから値を取り出し設定
     NSUserDefaults *defaults2 = [NSUserDefaults standardUserDefaults];
     
     NSString* strName = [defaults2 stringForKey:@"NameTextField"];
@@ -49,15 +54,11 @@
    
     self.DatailsTextField.text = strDatails;
     
-    
-    // Processing clear the keyboard when the tap of the Return.
     self.NameTextField.delegate = self;
     
     self.DateTextField.delegate = self;
     
     self.PlaceTextField.delegate = self;
-    
-    
     
    // self.DatailsTextField.delegate = self;
 
@@ -99,6 +100,7 @@
     
     //textViewに黒色の枠を付ける
     [[self.DatailsTextField layer] setBorderColor:[[UIColor blackColor] CGColor]];
+    
     [[self.DatailsTextField layer] setBorderWidth:0.0];
     
     
@@ -124,18 +126,60 @@
 //    }
  self.DatailsTextField.delegate = self;
     
+    
 //    // キーボードが表示されたときのNotificationをうけとります。（後で）
 //    [self registerForKeyboardNotifications];
     
+    // DatePickerの設定
+    UIDatePicker* datePicker = [[UIDatePicker alloc]init];
+    [datePicker setDatePickerMode:UIDatePickerModeDate];
+    
+    // DatePickerを編集したら、updateTextFieldを呼び出す
+    [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
+    
+    // textFieldの入力をdatePickerに設定
+    _DateTextField.inputView = datePicker;
+    
+    // Delegationの設定
+    _DateTextField.delegate = self;
+    
+    // DoneボタンとそのViewの作成
+    UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+    keyboardDoneButtonView.barStyle  = UIBarStyleBlack;
+    keyboardDoneButtonView.translucent = YES;
+    keyboardDoneButtonView.tintColor = nil;
+    [keyboardDoneButtonView sizeToFit];
+    
+    // 完了ボタンとSpacerの配置
+    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStyleBordered target:self action:@selector(pickerDoneClicked:)];
+    UIBarButtonItem *spacer1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:spacer, spacer1, doneButton, nil]];
+    
+    // Viewの配置
+    _DateTextField.inputAccessoryView = keyboardDoneButtonView;
+    
+    [self.view addSubview:_DateTextField];
     
     
 }
+
 
 -(BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
 
     //テキストビューを編集するであろう。
     [self registerForKeyboardNotifications];
+    
+    //全体を上げる。
+    _upView.frame = CGRectMake(20, -85, self.view.bounds.size.width, 250);
+    
+    _DetailsLabel.frame = CGRectMake(20, 185, 92, 21);
+    
+    _DatailsTextField.frame = CGRectMake(20, 210, 239,136);
+    
+//ボタンを上げる。
+    _closetapBtn.frame = CGRectMake(20, 0, 239,136);
     
     return YES;
 
@@ -144,30 +188,58 @@
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
     
-    NSLog(@"keyboardWasShown");
+    //NSLog(@"keyboardWasShown");
     
-    _upView.frame = CGRectMake(20, -85, self.view.bounds.size.width, 250);
     
-    _DetailsLabel.frame = CGRectMake(20, 185, 92, 21);
-    
-    _DatailsTextField.frame = CGRectMake(20, 210, 239,136);
+}
 
+-(void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    //全体を下げる
+//    _upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
+//    
+//    _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+//    
+//    _DatailsTextField.frame = CGRectMake(20,325,239,136);
+//    
+
+    [self downobject];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+}
+
+-(void)downobject
+{
+//全体を下げる
+_upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
+
+_DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+
+_DatailsTextField.frame = CGRectMake(20,325,239,136);
+    
+_defaulttapBtn.frame = CGRectMake(20,269,239,136);
+
+_closetapBtn.frame = CGRectMake(20,269,239,136);
+    
 }
 
 - (void)registerForKeyboardNotifications
 {
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWasShown:)
-                                                 name:UIKeyboardDidShowNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(keyboardWillBeHidden:)
-//                                                 name:UIKeyboardWillHideNotification object:nil];
+    selector:@selector(keyboardWasShown:)
+    name:UIKeyboardDidShowNotification object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+    selector:@selector(keyboardWillBeHidden:)
+    name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)NametextField
 
 {
-    //ユーザーデフォルトの宣言 テキストフィールドに入力された文字を
+    //ユーザーデフォルトの宣言 テキストフィールドに入力された文字を残す
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults setObject:self.NameTextField.text forKey:@"NameTextField"];
@@ -219,6 +291,7 @@
 
 - (IBAction)defaulttapBtn:(id)sender
 {
+    
     
     // ユーザーデフォルトから文字列配列を取得
 //     NSString *str = ;
@@ -297,11 +370,13 @@
     [self.DatailsTextField resignFirstResponder];
     
     //全体を下げる
-    _upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
-    
-    _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+//    _upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
+//    
+//    _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+//
+//    _DatailsTextField.frame = CGRectMake(20,325,239,136);
 
-    _DatailsTextField.frame = CGRectMake(20,325,239,136);
+    [self downobject];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
     
