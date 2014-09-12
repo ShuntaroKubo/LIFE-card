@@ -9,6 +9,7 @@
 #import "SwitchViewController.h"
 #import "UIViewController+MFSideMenuAdditions.h"
 #import "MFSideMenuContainerViewController.h"
+#import "LINEActivity.h"
 
 @interface SwitchViewController ()
 
@@ -156,10 +157,20 @@
 }
 
 
-- (IBAction)shareButton:(id)sender
+- (IBAction)shareButton:(id)item
 
 {
+    //LINEを表示させるソースコード
+    NSArray *activityItems = @[item];
     
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+    /*
+    //シェア時に表示させるもの
     NSString *text = @"Hello World!";
     
     NSArray* actItems = [NSArray arrayWithObjects:text, nil];
@@ -168,6 +179,7 @@
                                               initWithActivityItems:actItems applicationActivities:nil];
     
     [self presentViewController:activityView animated:YES completion:nil];
+     */
 }
 - (IBAction)trashSwitch:(id)sender
 {

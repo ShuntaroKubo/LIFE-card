@@ -10,9 +10,6 @@
 		0F24FA43BDD2423EB0B2ACF1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5405AAC39A4D88B2BA0982 /* libPods.a */; };
 		AA33B3E31997310100056688 /* earth182-3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3E21997310100056688 /* earth182-3.png */; };
 		AA33B3E51997313800056688 /* handshake1-3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3E41997313800056688 /* handshake1-3.png */; };
-		AA33D37F1997336500056688 /* cellphone1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D37E1997336500056688 /* cellphone1.png */; };
-		AA33D3811997349000056688 /* telephone36-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D3801997349000056688 /* telephone36-2.png */; };
-		AA33D38319973F1200056688 /* stock4-3 2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D38219973F1200056688 /* stock4-3 2.png */; };
 		AA33D38619987FF500056688 /* LINEActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33D38519987FF500056688 /* LINEActivity.m */; };
 		AA33D38B1998800100056688 /* LINEActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D3871998800100056688 /* LINEActivityIcon.png */; };
 		AA33D38C1998800100056688 /* LINEActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D3881998800100056688 /* LINEActivityIcon@2x.png */; };
@@ -22,6 +19,9 @@
 		AA33D3961998F30700056688 /* task-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D3951998F30700056688 /* task-2.png */; };
 		AA33D39C1998F63E00056688 /* delete48.png in Resources */ = {isa = PBXBuildFile; fileRef = AA33D39B1998F63E00056688 /* delete48.png */; };
 		AA33D39F19990C6600056688 /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33D39E19990C6600056688 /* SwitchViewController.m */; };
+		AA5FC6DE19C2869C004B04AC /* stock4-3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5FC6DD19C2869C004B04AC /* stock4-3.png */; };
+		AA5FC6E019C2E241004B04AC /* telephone36-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5FC6DF19C2E241004B04AC /* telephone36-2.png */; };
+		AA5FC6E219C2E255004B04AC /* cellphone1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5FC6E119C2E255004B04AC /* cellphone1.png */; };
 		AA97338319932CE400F7344A /* スクリーンショット 2014-08-07 6.49.46.png in Resources */ = {isa = PBXBuildFile; fileRef = AA97338219932CE400F7344A /* スクリーンショット 2014-08-07 6.49.46.png */; };
 		AA9FB71F19947DED002AE889 /* lifecard.png in Resources */ = {isa = PBXBuildFile; fileRef = AA9FB71E19947DED002AE889 /* lifecard.png */; };
 		AA9FB7251995CB37002AE889 /* top2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9FB7241995CB37002AE889 /* top2ViewController.m */; };
@@ -61,9 +61,6 @@
 		5C5405AAC39A4D88B2BA0982 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA33B3E21997310100056688 /* earth182-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "earth182-3.png"; path = "../../../../Downloads/earth182-3.png"; sourceTree = "<group>"; };
 		AA33B3E41997313800056688 /* handshake1-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "handshake1-3.png"; path = "../../../../Downloads/handshake1-3.png"; sourceTree = "<group>"; };
-		AA33D37E1997336500056688 /* cellphone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellphone1.png; path = ../../../../Downloads/cellphone1.png; sourceTree = "<group>"; };
-		AA33D3801997349000056688 /* telephone36-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telephone36-2.png"; path = "../../../../Downloads/telephone36-2.png"; sourceTree = "<group>"; };
-		AA33D38219973F1200056688 /* stock4-3 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stock4-3 2.png"; path = "../../../../Downloads/stock4-3 2.png"; sourceTree = "<group>"; };
 		AA33D38419987FF500056688 /* LINEActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINEActivity.h; sourceTree = "<group>"; };
 		AA33D38519987FF500056688 /* LINEActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINEActivity.m; sourceTree = "<group>"; };
 		AA33D3871998800100056688 /* LINEActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LINEActivityIcon.png; sourceTree = "<group>"; };
@@ -75,6 +72,9 @@
 		AA33D39B1998F63E00056688 /* delete48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete48.png; sourceTree = "<group>"; };
 		AA33D39D19990C6600056688 /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		AA33D39E19990C6600056688 /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
+		AA5FC6DD19C2869C004B04AC /* stock4-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stock4-3.png"; sourceTree = "<group>"; };
+		AA5FC6DF19C2E241004B04AC /* telephone36-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telephone36-2.png"; path = "image/telephone36-2.png"; sourceTree = "<group>"; };
+		AA5FC6E119C2E255004B04AC /* cellphone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellphone1.png; path = image/cellphone1.png; sourceTree = "<group>"; };
 		AA97338219932CE400F7344A /* スクリーンショット 2014-08-07 6.49.46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "スクリーンショット 2014-08-07 6.49.46.png"; path = "image/スクリーンショット 2014-08-07 6.49.46.png"; sourceTree = "<group>"; };
 		AA9FB71E19947DED002AE889 /* lifecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lifecard.png; path = image/lifecard.png; sourceTree = "<group>"; };
 		AA9FB7231995CB37002AE889 /* top2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = top2ViewController.h; sourceTree = "<group>"; };
@@ -181,12 +181,12 @@
 				AAE8530819907F03007B4F5D /* nextViewController.m */,
 				AA33D39D19990C6600056688 /* SwitchViewController.h */,
 				AA33D39E19990C6600056688 /* SwitchViewController.m */,
+				AADF0F13199F588B005B9210 /* rightSideMenuViewController.h */,
+				AADF0F14199F588B005B9210 /* rightSideMenuViewController.m */,
 				AA33D38419987FF500056688 /* LINEActivity.h */,
 				AA33D38519987FF500056688 /* LINEActivity.m */,
 				AAE852E2198C8607007B4F5D /* Images.xcassets */,
 				AAE852D1198C8607007B4F5D /* Supporting Files */,
-				AADF0F13199F588B005B9210 /* rightSideMenuViewController.h */,
-				AADF0F14199F588B005B9210 /* rightSideMenuViewController.m */,
 			);
 			path = "LIFE card";
 			sourceTree = "<group>";
@@ -194,6 +194,9 @@
 		AAE852D1198C8607007B4F5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA5FC6E119C2E255004B04AC /* cellphone1.png */,
+				AA5FC6DF19C2E241004B04AC /* telephone36-2.png */,
+				AA5FC6DD19C2869C004B04AC /* stock4-3.png */,
 				AA33D39B1998F63E00056688 /* delete48.png */,
 				AA33D3951998F30700056688 /* task-2.png */,
 				AA33D3911998D93500056688 /* multiple25.png */,
@@ -201,9 +204,6 @@
 				AA33D3881998800100056688 /* LINEActivityIcon@2x.png */,
 				AA33D3891998800100056688 /* LINEActivityIcon@2x~ipad.png */,
 				AA33D38A1998800100056688 /* LINEActivityIcon~ipad.png */,
-				AA33D38219973F1200056688 /* stock4-3 2.png */,
-				AA33D3801997349000056688 /* telephone36-2.png */,
-				AA33D37E1997336500056688 /* cellphone1.png */,
 				AA33B3E41997313800056688 /* handshake1-3.png */,
 				AA33B3E21997310100056688 /* earth182-3.png */,
 				AA9FB7281995EF54002AE889 /* jjjj.png */,
@@ -317,7 +317,7 @@
 			files = (
 				AAE852E3198C8607007B4F5D /* Images.xcassets in Resources */,
 				AAE852D5198C8607007B4F5D /* InfoPlist.strings in Resources */,
-				AA33D37F1997336500056688 /* cellphone1.png in Resources */,
+				AA5FC6E219C2E255004B04AC /* cellphone1.png in Resources */,
 				AA33D3961998F30700056688 /* task-2.png in Resources */,
 				AA33D38B1998800100056688 /* LINEActivityIcon.png in Resources */,
 				AA9FB7291995EF54002AE889 /* jjjj.png in Resources */,
@@ -327,13 +327,13 @@
 				AA33D38C1998800100056688 /* LINEActivityIcon@2x.png in Resources */,
 				AA33D38D1998800100056688 /* LINEActivityIcon@2x~ipad.png in Resources */,
 				AA33B3E31997310100056688 /* earth182-3.png in Resources */,
-				AA33D3811997349000056688 /* telephone36-2.png in Resources */,
 				AAE852DE198C8607007B4F5D /* Main.storyboard in Resources */,
 				AA97338319932CE400F7344A /* スクリーンショット 2014-08-07 6.49.46.png in Resources */,
-				AA33D38319973F1200056688 /* stock4-3 2.png in Resources */,
 				AA9FB71F19947DED002AE889 /* lifecard.png in Resources */,
+				AA5FC6E019C2E241004B04AC /* telephone36-2.png in Resources */,
 				AA33B3E51997313800056688 /* handshake1-3.png in Resources */,
 				AA33D39C1998F63E00056688 /* delete48.png in Resources */,
+				AA5FC6DE19C2869C004B04AC /* stock4-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

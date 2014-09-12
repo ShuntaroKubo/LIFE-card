@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface rightSideMenuViewController : UIViewController
-<UITextFieldDelegate,UITextViewDelegate>
+<UITextFieldDelegate,UITextViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *defaulttapBtn;
 
@@ -33,6 +33,8 @@
 
 //ボタンのアクション
 - (IBAction)defalttapBtn:(id)sender;
+
+- (IBAction)closetapBtn:(id)sender;
 
 //labelに名前をつける
 @property (weak, nonatomic) IBOutlet UIView *upView;

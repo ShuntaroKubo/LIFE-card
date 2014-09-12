@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfc-Sm-Aww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2991" y="-213"/>
+            <point key="canvasLocation" x="2962" y="-213"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vdf-TD-ffG">
@@ -248,7 +248,7 @@
         <scene sceneID="fJ6-vv-sXB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJX-36-dhK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Data" image="stock4-3 2.png" id="FLN-Hw-S1o"/>
+                    <tabBarItem key="tabBarItem" title="Data" image="stock4-3.png" id="FLN-Hw-S1o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="brK-er-2g9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -461,9 +461,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG1-eP-UTN">
-                                <rect key="frame" x="210" y="518" width="46" height="30"/>
+                                <rect key="frame" x="226" y="524" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="保存">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -525,11 +525,14 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-6O-mbI">
-                                <rect key="frame" x="210" y="308" width="46" height="30"/>
+                                <rect key="frame" x="136" y="304" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="キーボード下げる">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closetapBtn:" destination="LxS-AS-Gd3" eventType="touchUpInside" id="Bz9-uo-Nuq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -557,14 +560,14 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2963" y="1184"/>
+            <point key="canvasLocation" x="2962" y="1184"/>
         </scene>
     </scenes>
     <resources>
         <image name="delete48.png" width="24" height="34"/>
         <image name="earth182-3.png" width="51" height="39"/>
         <image name="handshake1-3.png" width="36" height="27"/>
-        <image name="stock4-3 2.png" width="42" height="42"/>
+        <image name="stock4-3.png" width="64" height="64"/>
         <image name="task-2.png" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>

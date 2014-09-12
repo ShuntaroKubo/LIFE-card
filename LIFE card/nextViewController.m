@@ -7,6 +7,7 @@
 //
 
 #import "nextViewController.h"
+#import "LINEActivity.h"
 
 
 @interface nextViewController ()
@@ -73,7 +74,8 @@
 - (IBAction)shareButton:(id)sender
 
 {
-    
+   
+   //シェア時に表示させるもの
     NSString *text = @"Hello World!";
     
     NSArray* actItems = [NSArray arrayWithObjects:text, nil];
@@ -84,9 +86,17 @@
     [self presentViewController:activityView animated:YES completion:nil];
 }
 
-- (IBAction)slideButton:(id)sender
+- (IBAction)slideButton:(id)item
 
 {
+    //LINEを表示させるソースコード
+    NSArray *activityItems = @[item];
+    
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
     
 }
 @end
