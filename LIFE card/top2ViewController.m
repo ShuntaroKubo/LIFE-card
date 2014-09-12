@@ -16,6 +16,7 @@
 @implementation top2ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -25,6 +26,7 @@
 }
 
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
     
@@ -47,6 +49,7 @@
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
+
 {
     //webが開いた時、indicatorを止める処理
     [self.loadingindicator stopAnimating];
@@ -54,10 +57,10 @@
     //webが開いた時、indicataorを透過させる処理
     self.loadingindicator.alpha = 0;
    
-       
 }
 
 - (void)didReceiveMemoryWarning
+
 {
     
     [super didReceiveMemoryWarning];

@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>6C0F79FC-9455-47AE-BDDB-A6FBF1851AFB</string>
+=======
+	<string>0AB61ADE-42EC-4B0A-A1D3-0AD6286C14C8</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectName</key>
 	<string>LIFE card</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>

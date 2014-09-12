@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "top2ViewController.h"
 
 
 @interface nextViewController : UIViewController

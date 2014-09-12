@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <QuartzCore/QuartzCore.h>
 
 @interface rightSideMenuViewController : UIViewController
+<<<<<<< HEAD
 <UITextFieldDelegate,UITextViewDelegate,UITextFieldDelegate>
+=======
+
+<UITextFieldDelegate,UITextViewDelegate>
+>>>>>>> FETCH_HEAD
 
 @property (weak, nonatomic) IBOutlet UIButton *defaulttapBtn;
 
@@ -34,7 +38,11 @@
 //ボタンのアクション
 - (IBAction)defalttapBtn:(id)sender;
 
+<<<<<<< HEAD
 - (IBAction)closetapBtn:(id)sender;
+=======
+@property (weak, nonatomic) IBOutlet UIButton *closetapBtn;
+>>>>>>> FETCH_HEAD
 
 //labelに名前をつける
 @property (weak, nonatomic) IBOutlet UIView *upView;
@@ -42,7 +50,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *DetailsLabel;
 
 //スワイプジェスチャーの設定
-
 - (IBAction)swipeGestureDown:(id)sender;
 
 @end

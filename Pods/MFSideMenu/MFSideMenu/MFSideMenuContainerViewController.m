@@ -141,6 +141,10 @@ typedef enum {
             [(UIScrollView *)_rightSideMenuViewController.view setContentInset:insets];
         }
     }
+    
+    //キーボードが表示されたら閉じる
+    [self.view endEditing:YES];
+
 }
 
 

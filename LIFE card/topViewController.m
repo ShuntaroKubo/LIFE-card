@@ -11,15 +11,9 @@
 
 @interface topViewController ()
 
-
 @end
 
-
-
-
-
 @implementation topViewController
-
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems
 
@@ -34,9 +28,8 @@
     return NO;
 }
 
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
@@ -47,8 +40,10 @@
 }
 
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
+    
     //self.mytextView.text = @"臓器移植を待つ人の為に私たちが出来る事\nそれが臓器提供の意思表示です。\n軽々しく決めることでなく、\nノーといってもいい。\n大事なのは意思を示すこと。\nひとりひとりが他人事ではなく、自分の事としてこの問題を考え、\n意思表示という行動をとる事が、移植医療の大きな一歩になる。\nそう思うのです。\n従来の「意思表示カード」に加え、\n健康保険証や運転免許証、\nさらにはインターネットでも\n意思表示が出来るようになりました。";
     
     //self.mytextView.font = [UIFont boldSystemFontOfSize:20.0];

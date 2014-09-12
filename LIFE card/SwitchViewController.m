@@ -49,7 +49,6 @@
 //    self.navigationItem.titleView = label;
     
     //テキストビューの編集不可
-    
     self.myTextField.editable = NO;
     
     self.doneLabel.font = [UIFont systemFontOfSize:23];
@@ -156,12 +155,17 @@
     
 }
 
+<<<<<<< HEAD
 
 - (IBAction)shareButton:(id)item
+=======
+- (void)shareItem:(id)item
+>>>>>>> FETCH_HEAD
 
 {
     //LINEを表示させるソースコード
     NSArray *activityItems = @[item];
+<<<<<<< HEAD
     
     NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
     
@@ -172,22 +176,51 @@
     /*
     //シェア時に表示させるもの
     NSString *text = @"Hello World!";
+=======
     
-    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
     
-    UIActivityViewController *activityView = [[UIActivityViewController alloc]
-                                              initWithActivityItems:actItems applicationActivities:nil];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+>>>>>>> FETCH_HEAD
     
+    [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+}
+
+
+
+- (IBAction)shareButton:(id)item
+
+{
+    //シェア時に表示させるもの
+//    NSString *text = @"Hello World!";
+//    
+//    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
+//    
+//    UIActivityViewController *activityView = [[UIActivityViewController alloc]
+//    initWithActivityItems:actItems applicationActivities:nil];
+//    
+//    [self presentViewController:activityView animated:YES completion:nil];
+    
+    
+<<<<<<< HEAD
     [self presentViewController:activityView animated:YES completion:nil];
      */
+=======
+    [self shareItem:@"test"];
+   
+>>>>>>> FETCH_HEAD
 }
+
 - (IBAction)trashSwitch:(id)sender
+
 {
 //    self.doneView.alpha = 1.0;
 //    
 //    self.doneView.alpha = 0.0;
     
     
+    //ボタン押した時のアクションシートの設定
     UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"本当に解除しますか？"
         delegate:self cancelButtonTitle:@"Cancel"destructiveButtonTitle:@"削除" otherButtonTitles:nil];
     
@@ -216,13 +249,9 @@
         
         default:
             break;
-            
-            
 }
     
 }
-
-
 
 - (IBAction)tapinformationBtn:(id)sender
 
