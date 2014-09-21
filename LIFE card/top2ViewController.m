@@ -16,6 +16,7 @@
 @implementation top2ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -25,16 +26,41 @@
 }
 
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
     
     NSURL *myURL = [NSURL URLWithString:@"http://www.jotnw.or.jp/sp/"];
+    
     NSURLRequest *myURLReq = [NSURLRequest requestWithURL:myURL];
     
     [self.topWebView loadRequest: myURLReq];
+    
+    //indicatorに対して回す処理を書く
+    [self.loadingindicator startAnimating];
+    
+    //
+    self.topWebView.delegate = self;
+    
+//    // サイズを指定した生成例
+//    UIActivityIndicatorView *ai =
+//    [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+
+{
+    //webが開いた時、indicatorを止める処理
+    [self.loadingindicator stopAnimating];
+    
+    //webが開いた時、indicataorを透過させる処理
+    self.loadingindicator.alpha = 0;
+   
 }
 
 - (void)didReceiveMemoryWarning
+
 {
     
     [super didReceiveMemoryWarning];

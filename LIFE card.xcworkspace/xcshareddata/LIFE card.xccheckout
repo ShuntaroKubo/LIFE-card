@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
+	<string>6C0F79FC-9455-47AE-BDDB-A6FBF1851AFB</string>
+=======
+	<string>0AB61ADE-42EC-4B0A-A1D3-0AD6286C14C8</string>
+>>>>>>> FETCH_HEAD
+	<key>IDESourceControlProjectName</key>
+	<string>LIFE card</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BA92B943-E76E-45E4-9B11-0F1CF1B53FF2</key>
+		<string>https://github.com/ShuntaroKubo/LIFE-card.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LIFE card.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BA92B943-E76E-45E4-9B11-0F1CF1B53FF2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ShuntaroKubo/LIFE-card.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BA92B943-E76E-45E4-9B11-0F1CF1B53FF2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BA92B943-E76E-45E4-9B11-0F1CF1B53FF2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LIFE card</string>
+		</dict>
+	</array>
+</dict>
+</plist>

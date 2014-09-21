@@ -7,6 +7,7 @@
 //
 
 #import "nextViewController.h"
+#import "LINEActivity.h"
 
 
 @interface nextViewController ()
@@ -70,20 +71,62 @@
 }
 */
 
+- (void)shareItem:(id)item
+
+{
+<<<<<<< HEAD
+   
+   //シェア時に表示させるもの
+    NSString *text = @"Hello World!";
+=======
+    //LINEを表示させるソースコード
+    NSArray *activityItems = @[item];
+    
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+>>>>>>> FETCH_HEAD
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+}
+
+
 - (IBAction)shareButton:(id)sender
 
 {
+   
+   //シェア時に表示させるもの
+//    NSString *text = @"Hello World!";
+//    
+//    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
+//    
+//    UIActivityViewController *activityView = [[UIActivityViewController alloc]
+//                                              initWithActivityItems:actItems applicationActivities:nil];
+//    
+//    [self presentViewController:activityView animated:YES completion:nil];
     
-    NSString *text = @"Hello World!";
-    NSArray* actItems = [NSArray arrayWithObjects:text, nil];
     
-    UIActivityViewController *activityView = [[UIActivityViewController alloc]
-                                              initWithActivityItems:actItems applicationActivities:nil];
+    [self shareItem:@"test"];
     
-    [self presentViewController:activityView animated:YES completion:nil];
 }
-- (IBAction)slideButton:(id)sender
+
+- (IBAction)slideButton:(id)item
+
 {
+    //LINEを表示させるソースコード
+    NSArray *activityItems = @[item];
+    
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+    top2ViewController *top2ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"top2ViewController"];
+    //    [self presentViewController:top2ViewController animated:YES completion:nil];
+    
+     [[self navigationController] pushViewController:top2ViewController animated:YES];
     
 }
 @end

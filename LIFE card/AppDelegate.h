@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MFSideMenu.h"
+#import "rightSideMenuViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic) rightSideMenuViewController *RightMenuViewContoroller;
+
+@property (nonatomic) ViewController *tmpViewContoroller;
 
 @end
