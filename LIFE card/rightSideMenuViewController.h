@@ -35,6 +35,7 @@
 - (IBAction)defalttapBtn:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *closetapBtn;
+- (IBAction)closetapBtn:(id)sender;
 
 //labelに名前をつける
 @property (weak, nonatomic) IBOutlet UIView *upView;

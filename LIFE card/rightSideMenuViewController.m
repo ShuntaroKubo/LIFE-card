@@ -330,6 +330,7 @@ _closetapBtn.frame = CGRectMake(20,269,239,136);
 
 {
     
+    
     //strにTextFieldに入力した文字の保存
     NSString *str;
     
@@ -382,6 +383,18 @@ _closetapBtn.frame = CGRectMake(20,269,239,136);
     
     
     
+    
+}
+- (IBAction)closetapBtn:(id)sender
+{
+    //キーボード閉じる
+    [self.NameTextField resignFirstResponder];
+    
+    [self.DateTextField resignFirstResponder];
+    
+    [self.PlaceTextField resignFirstResponder];
+    
+    [self.DatailsTextField resignFirstResponder];
     
 }
 @end

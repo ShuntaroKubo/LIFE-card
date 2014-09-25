@@ -23,7 +23,7 @@
 
 - (IBAction)sharebutton:(id)sender;
 
-
+- (UIImage *)screenshotWithView:(UIView *)view;
 
 
 @end

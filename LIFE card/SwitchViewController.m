@@ -36,6 +36,7 @@
 //}
 
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
     
@@ -185,9 +186,52 @@
 //    [self presentViewController:activityView animated:YES completion:nil];
     
     
-    [self shareItem:@"test"];
+//    [self shareItem:@"test"];
+    UIImage *windowImage = [self screenshotWithView:self.view];
+    
+    //シェア用文章,URL,画像（モダンな書き方）
+    NSString *text = @"LIFE card ~Think For Action~ ";
+    
+    NSArray *actItems = @[text,windowImage];
+    
+    UIActivityViewController *activityView = [[UIActivityViewController alloc]
+                                              initWithActivityItems:actItems applicationActivities:nil];
+    
+    
+    [self presentViewController:activityView animated:YES completion:nil];
+
    
 }
+
+//スクリーンショットを取る
+- (UIImage *)screenshotWithView:(UIView *)view
+{
+    CGSize imageSize = [self.view bounds].size;
+    if (NULL != UIGraphicsBeginImageContextWithOptions)
+        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    else
+        UIGraphicsBeginImageContext(imageSize);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, [view center].x, [view center].y);
+    CGContextConcatCTM(context, [view transform]);
+    CGContextTranslateCTM(context,
+                          -[view bounds].size.width * [[view layer] anchorPoint].x - view.frame.origin.x,
+                          -[view bounds].size.height * [[view layer] anchorPoint].y - view.frame.origin.y);
+    
+    [[view layer] renderInContext:context];
+    
+    CGContextRestoreGState(context);
+    
+    // Retrieve the screenshot image
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 
 - (IBAction)trashSwitch:(id)sender
 
@@ -202,6 +246,15 @@
         delegate:self cancelButtonTitle:@"Cancel"destructiveButtonTitle:@"削除" otherButtonTitles:nil];
     
     [actionSheet showInView:self.view];
+    
+    
+   
+    
+    //ユーザデフォルトのデータを一括削除する方法
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    
+//    rightSideMenuViewController
     
 }
 
