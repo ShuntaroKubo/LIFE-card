@@ -156,15 +156,33 @@
     
 }
 
+<<<<<<< HEAD
+
+- (IBAction)shareButton:(id)item
+=======
 - (void)shareItem:(id)item
+>>>>>>> FETCH_HEAD
 
 {
     //LINEを表示させるソースコード
     NSArray *activityItems = @[item];
+<<<<<<< HEAD
     
     NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
+    
+    /*
+    //シェア時に表示させるもの
+    NSString *text = @"Hello World!";
+=======
+    
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+>>>>>>> FETCH_HEAD
     
     [self presentViewController:activityViewController animated:YES completion:NULL];
     
@@ -186,6 +204,7 @@
 //    [self presentViewController:activityView animated:YES completion:nil];
     
     
+<<<<<<< HEAD
 //    [self shareItem:@"test"];
     UIImage *windowImage = [self screenshotWithView:self.view];
     
@@ -200,7 +219,15 @@
     
     [self presentViewController:activityView animated:YES completion:nil];
 
+=======
+<<<<<<< HEAD
+    [self presentViewController:activityView animated:YES completion:nil];
+     */
+=======
+    [self shareItem:@"test"];
+>>>>>>> FETCH_HEAD
    
+>>>>>>> FETCH_HEAD
 }
 
 //スクリーンショットを取る

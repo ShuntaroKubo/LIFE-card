@@ -74,10 +74,16 @@
 - (void)shareItem:(id)item
 
 {
+<<<<<<< HEAD
+   
+   //シェア時に表示させるもの
+    NSString *text = @"Hello World!";
+=======
     //LINEを表示させるソースコード
     NSArray *activityItems = @[item];
     
     NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+>>>>>>> FETCH_HEAD
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
     
@@ -147,10 +153,22 @@
     return image;
 }
 
+<<<<<<< HEAD
 
 - (IBAction)slideButton:(id)sender
+=======
+- (IBAction)slideButton:(id)item
+>>>>>>> FETCH_HEAD
 
 {
+    //LINEを表示させるソースコード
+    NSArray *activityItems = @[item];
+    
+    NSArray *applicationActivities = @[[[LINEActivity alloc] init]];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    
+    [self presentViewController:activityViewController animated:YES completion:NULL];
     
     top2ViewController *top2ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"top2ViewController"];
     //    [self presentViewController:top2ViewController animated:YES completion:nil];

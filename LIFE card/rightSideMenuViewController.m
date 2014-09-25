@@ -129,7 +129,38 @@
     
 //    // キーボードが表示されたときのNotificationをうけとります。（後で）
 //    [self registerForKeyboardNotifications];
+   
+    // UITextFieldの設定
+    CGRect rectBIR = CGRectMake(10, 345, 300, 25);
+    UITextField *DateTextField = [[UITextField alloc]initWithFrame:rectBIR];
     
+    // DatePickerの設定
+    UIDatePicker* datePicker = [[UIDatePicker alloc]init];
+    [datePicker setDatePickerMode:UIDatePickerModeDate];
+    
+    // DatePickerを編集したら、updateTextFieldを呼び出す
+    [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
+    
+    // textFieldの入力をdatePickerに設定
+    DateTextField.inputView = datePicker;
+    
+    // Delegationの設定
+    DateTextField.delegate = self;
+    
+    // DoneボタンとそのViewの作成
+    UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+    keyboardDoneButtonView.barStyle  = UIBarStyleBlack;
+    keyboardDoneButtonView.translucent = YES;
+    keyboardDoneButtonView.tintColor = nil;
+    [keyboardDoneButtonView sizeToFit];
+    
+<<<<<<< HEAD
+    // 完了ボタンとSpacerの配置
+    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStyleBordered target:DateTextField action:@selector(pickerDoneClicked)];
+    UIBarButtonItem *spacer1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:spacer, spacer1, doneButton, nil]];
+=======
     // DatePickerの設定
     UIDatePicker* datePicker = [[UIDatePicker alloc]init];
     [datePicker setDatePickerMode:UIDatePickerModeDate];
@@ -160,10 +191,31 @@
     _DateTextField.inputAccessoryView = keyboardDoneButtonView;
     
     [self.view addSubview:_DateTextField];
+>>>>>>> FETCH_HEAD
     
+    // Viewの配置
+    DateTextField.inputAccessoryView = keyboardDoneButtonView;
     
+    [self.view addSubview:DateTextField];
 }
 
+<<<<<<< HEAD
+#pragma mark DatePickerの編集が完了したら結果をTextFieldに表示
+-(void)updateTextField:(id)sender {
+    UIDatePicker *picker = (UIDatePicker *)sender;
+    _DateTextField.text = [NSString stringWithFormat:@"%@", picker.date];
+}
+
+#pragma mark datepickerの完了ボタンが押された場合
+//-(void)pickerDoneClicked {
+//    [_birth resignFirstResponder];
+//    _activeField = nil;
+//}
+
+    
+
+=======
+>>>>>>> FETCH_HEAD
 
 -(BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
@@ -355,6 +407,17 @@ _closetapBtn.frame = CGRectMake(20,269,239,136);
 //    NSLog(@"あれ%@", str);
 //    
 //    NSLog(@"あれ%@", defaults);
+}
+
+- (IBAction)closetapBtn:(id)sender
+{
+    //全体を下げる
+    _upView.frame = CGRectMake(20, 20, self.view.bounds.size.width, 250);
+    
+    _DetailsLabel.frame = CGRectMake(20, 290, 92, 21);
+    
+    _DatailsTextField.frame = CGRectMake(20,325,239,136);
+
 }
 
 
